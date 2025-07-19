@@ -1,0 +1,2149 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote-dns",
+        "address": "https://family.cloudflare-dns.com/dns-query",
+        "address_resolver": "direct-dns",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "direct-dns",
+        "address": "local",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns-final",
+        "address": "local",
+        "address_resolver": "dns-local",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      },
+      {
+        "tag": "Internet-dns",
+        "address": "https://8.8.8.8/dns-query#ecs=223.5.5.0/24&ecs-override=true",
+        "strategy": "ipv4_only",
+        "detour": "Internet"
+      },
+      {
+        "tag": "Best Latency-dns",
+        "address": "1.1.1.1",
+        "strategy": "ipv4_only",
+        "detour": "Best Latency"
+      },
+      {
+        "tag": "Lock Region ID-dns",
+        "address": "8.8.8.8",
+        "strategy": "ipv4_only",
+        "detour": "Lock Region ID"
+      },
+      {
+        "tag": "WhatsApp-dns",
+        "address": "8.8.4.4",
+        "strategy": "ipv4_only",
+        "detour": "WhatsApp"
+      },
+      {
+        "tag": "GAMESMAX(ML/FF/AOV)-dns",
+        "address": "8.8.4.4",
+        "strategy": "ipv4_only",
+        "detour": "GAMESMAX(ML/FF/AOV)"
+      },
+      {
+        "tag": "Route Port Game-dns",
+        "address": "9.9.9.9",
+        "strategy": "ipv4_only",
+        "detour": "Route Port Game"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain_suffix": [
+          ".arpa.",
+          ".arpa"
+        ],
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "geosite": "rule-malicious",
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Internet",
+        "server": "Internet-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Best Latency",
+        "server": "Best Latency-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Lock Region ID",
+        "server": "Lock Region ID-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "WhatsApp",
+        "server": "WhatsApp-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "GAMESMAX(ML/FF/AOV)",
+        "server": "GAMESMAX(ML/FF/AOV)-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Route Port Game",
+        "server": "Route Port Game-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "direct",
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "any",
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "domain": [
+          "family.cloudflare-dns.com",
+          "quiz.int.vidio.com"
+        ],
+        "server": "direct-dns"
+      }
+    ],
+    "final": "dns-final",
+    "independent_cache": true,
+    "reverse_mapping": true,
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "mtu": 1400,
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "Internet",
+      "type": "selector",
+      "outbounds": [
+        "Best Latency",
+        "direct",
+        "🇮🇩 Telekomunikasi Indonesia -1",
+        "🇮🇩 AWS EC2 -2",
+        "🇮🇩 AWS EC2 -3",
+        "🇮🇩 Rumahweb -4",
+        "🇮🇩 Rumahweb -5",
+        "🇮🇩 Telekomunikasi Indonesia -6",
+        "🇮🇩 AWS EC2 -7",
+        "🇮🇩 AWS EC2 -8",
+        "🇮🇩 Rumahweb -9",
+        "🇮🇩 Rumahweb -10",
+        "🇮🇩 Telekomunikasi Indonesia -11",
+        "🇮🇩 AWS EC2 -12",
+        "🇮🇩 AWS EC2 -13",
+        "🇮🇩 Rumahweb -14",
+        "🇮🇩 Rumahweb -15",
+        "🇸🇬 Oracle Public Cloud -16",
+        "🇸🇬 DigitalOcean LLC -17",
+        "🇸🇬 Melbikomas UAB -18",
+        "🇸🇬 Akile LTD -19",
+        "🇸🇬 First Server Limited -20",
+        "🇸🇬 Oracle Public Cloud -21",
+        "🇸🇬 DigitalOcean LLC -22",
+        "🇸🇬 Melbikomas UAB -23",
+        "🇸🇬 Akile LTD -24",
+        "🇸🇬 First Server Limited -25",
+        "🇸🇬 Oracle Public Cloud -26",
+        "🇸🇬 Melbikomas UAB -27",
+        "🇸🇬 Akile LTD -28",
+        "🇸🇬 First Server Limited -29",
+        "🇯🇵 Oracle Cloud Infrastructure -30",
+        "🇯🇵 Vultr Holdings LLC -31",
+        "🇯🇵 Microsoft Azure Cloud -32",
+        "🇯🇵 Oracle Cloud Infrastructure -33",
+        "🇯🇵 Oracle Cloud Infrastructure -34",
+        "🇯🇵 Oracle Cloud Infrastructure -35",
+        "🇯🇵 Vultr Holdings LLC -36",
+        "🇯🇵 Microsoft Azure Cloud -37",
+        "🇯🇵 Oracle Cloud Infrastructure -38",
+        "🇯🇵 Oracle Cloud Infrastructure -39",
+        "🇯🇵 Oracle Cloud Infrastructure -40",
+        "🇯🇵 Vultr Holdings LLC -41",
+        "🇯🇵 Microsoft Azure Cloud -42",
+        "🇯🇵 Oracle Cloud Infrastructure -43",
+        "🇯🇵 Oracle Cloud Infrastructure -44",
+        "🇯🇵 Vultr Holdings LLC -45",
+        "🇰🇷 Chungbukbonbujang -46",
+        "🇰🇷 Korea Telecom -47",
+        "🇰🇷 Kornet -48",
+        "🇰🇷 Kornet -49",
+        "🇰🇷 Kornet -50",
+        "🇰🇷 Korea Telecom -51",
+        "🇰🇷 Kornet -52",
+        "🇰🇷 Kornet -53",
+        "🇰🇷 Kornet -54",
+        "🇰🇷 Chungbukbonbujang -55",
+        "🇰🇷 Korea Telecom -56",
+        "🇰🇷 Kornet -57",
+        "🇰🇷 Kornet -58",
+        "🇰🇷 Kornet -59",
+        "🇰🇷 Kornet -60",
+        "🇰🇷 HVGyeongnam -61",
+        "❓ - -62",
+        "❓ - -63",
+        "🇨🇦 OVH Hosting Inc. -64",
+        "🇩🇪 OVH GmbH -65",
+        "🇩🇪 OVH GmbH -66",
+        "🇩🇪 OVH GmbH -67",
+        "🇪🇸 Melbikomas UAB -68",
+        "🇪🇸 First Server Limited -69",
+        "🇫🇮 As56971 -70",
+        "🇳🇱 TIG -71",
+        "🇳🇱 Frontier Limited -72",
+        "🇵🇱 Begin Tokenend Token -73",
+        "🇷🇺 TimeWeb Ltd -74",
+        "🇸🇪 Aeza International LTD -75"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "Best Latency",
+      "outbounds": [
+        "direct",
+        "🇮🇩 Telekomunikasi Indonesia -1",
+        "🇮🇩 AWS EC2 -2",
+        "🇮🇩 AWS EC2 -3",
+        "🇮🇩 Rumahweb -4",
+        "🇮🇩 Rumahweb -5",
+        "🇮🇩 Telekomunikasi Indonesia -6",
+        "🇮🇩 AWS EC2 -7",
+        "🇮🇩 AWS EC2 -8",
+        "🇮🇩 Rumahweb -9",
+        "🇮🇩 Rumahweb -10",
+        "🇮🇩 Telekomunikasi Indonesia -11",
+        "🇮🇩 AWS EC2 -12",
+        "🇮🇩 AWS EC2 -13",
+        "🇮🇩 Rumahweb -14",
+        "🇮🇩 Rumahweb -15",
+        "🇸🇬 Oracle Public Cloud -16",
+        "🇸🇬 DigitalOcean LLC -17",
+        "🇸🇬 Melbikomas UAB -18",
+        "🇸🇬 Akile LTD -19",
+        "🇸🇬 First Server Limited -20",
+        "🇸🇬 Oracle Public Cloud -21",
+        "🇸🇬 DigitalOcean LLC -22",
+        "🇸🇬 Melbikomas UAB -23",
+        "🇸🇬 Akile LTD -24",
+        "🇸🇬 First Server Limited -25",
+        "🇸🇬 Oracle Public Cloud -26",
+        "🇸🇬 Melbikomas UAB -27",
+        "🇸🇬 Akile LTD -28",
+        "🇸🇬 First Server Limited -29",
+        "🇯🇵 Oracle Cloud Infrastructure -30",
+        "🇯🇵 Vultr Holdings LLC -31",
+        "🇯🇵 Microsoft Azure Cloud -32",
+        "🇯🇵 Oracle Cloud Infrastructure -33",
+        "🇯🇵 Oracle Cloud Infrastructure -34",
+        "🇯🇵 Oracle Cloud Infrastructure -35",
+        "🇯🇵 Vultr Holdings LLC -36",
+        "🇯🇵 Microsoft Azure Cloud -37",
+        "🇯🇵 Oracle Cloud Infrastructure -38",
+        "🇯🇵 Oracle Cloud Infrastructure -39",
+        "🇯🇵 Oracle Cloud Infrastructure -40",
+        "🇯🇵 Vultr Holdings LLC -41",
+        "🇯🇵 Microsoft Azure Cloud -42",
+        "🇯🇵 Oracle Cloud Infrastructure -43",
+        "🇯🇵 Oracle Cloud Infrastructure -44",
+        "🇯🇵 Vultr Holdings LLC -45",
+        "🇰🇷 Chungbukbonbujang -46",
+        "🇰🇷 Korea Telecom -47",
+        "🇰🇷 Kornet -48",
+        "🇰🇷 Kornet -49",
+        "🇰🇷 Kornet -50",
+        "🇰🇷 Korea Telecom -51",
+        "🇰🇷 Kornet -52",
+        "🇰🇷 Kornet -53",
+        "🇰🇷 Kornet -54",
+        "🇰🇷 Chungbukbonbujang -55",
+        "🇰🇷 Korea Telecom -56",
+        "🇰🇷 Kornet -57",
+        "🇰🇷 Kornet -58",
+        "🇰🇷 Kornet -59",
+        "🇰🇷 Kornet -60",
+        "🇰🇷 HVGyeongnam -61",
+        "❓ - -62",
+        "❓ - -63",
+        "🇨🇦 OVH Hosting Inc. -64",
+        "🇩🇪 OVH GmbH -65",
+        "🇩🇪 OVH GmbH -66",
+        "🇩🇪 OVH GmbH -67",
+        "🇪🇸 Melbikomas UAB -68",
+        "🇪🇸 First Server Limited -69",
+        "🇫🇮 As56971 -70",
+        "🇳🇱 TIG -71",
+        "🇳🇱 Frontier Limited -72",
+        "🇵🇱 Begin Tokenend Token -73",
+        "🇷🇺 TimeWeb Ltd -74",
+        "🇸🇪 Aeza International LTD -75"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "30s"
+    },
+    {
+      "type": "selector",
+      "tag": "Lock Region ID",
+      "outbounds": [
+        "🇮🇩 Telekomunikasi Indonesia -1",
+        "🇮🇩 AWS EC2 -2",
+        "🇮🇩 AWS EC2 -3",
+        "🇮🇩 Rumahweb -4",
+        "🇮🇩 Rumahweb -5",
+        "🇮🇩 Telekomunikasi Indonesia -6",
+        "🇮🇩 AWS EC2 -7",
+        "🇮🇩 AWS EC2 -8",
+        "🇮🇩 Rumahweb -9",
+        "🇮🇩 Rumahweb -10",
+        "🇮🇩 Telekomunikasi Indonesia -11",
+        "🇮🇩 AWS EC2 -12",
+        "🇮🇩 AWS EC2 -13",
+        "🇮🇩 Rumahweb -14",
+        "🇮🇩 Rumahweb -15",
+        "🇸🇬 Oracle Public Cloud -16",
+        "🇸🇬 DigitalOcean LLC -17",
+        "🇸🇬 Melbikomas UAB -18",
+        "🇸🇬 Akile LTD -19",
+        "🇸🇬 First Server Limited -20",
+        "🇸🇬 Oracle Public Cloud -21",
+        "🇸🇬 DigitalOcean LLC -22",
+        "🇸🇬 Melbikomas UAB -23",
+        "🇸🇬 Akile LTD -24",
+        "🇸🇬 First Server Limited -25",
+        "🇸🇬 Oracle Public Cloud -26",
+        "🇸🇬 Melbikomas UAB -27",
+        "🇸🇬 Akile LTD -28",
+        "🇸🇬 First Server Limited -29",
+        "🇯🇵 Oracle Cloud Infrastructure -30",
+        "🇯🇵 Vultr Holdings LLC -31",
+        "🇯🇵 Microsoft Azure Cloud -32",
+        "🇯🇵 Oracle Cloud Infrastructure -33",
+        "🇯🇵 Oracle Cloud Infrastructure -34",
+        "🇯🇵 Oracle Cloud Infrastructure -35",
+        "🇯🇵 Vultr Holdings LLC -36",
+        "🇯🇵 Microsoft Azure Cloud -37",
+        "🇯🇵 Oracle Cloud Infrastructure -38",
+        "🇯🇵 Oracle Cloud Infrastructure -39",
+        "🇯🇵 Oracle Cloud Infrastructure -40",
+        "🇯🇵 Vultr Holdings LLC -41",
+        "🇯🇵 Microsoft Azure Cloud -42",
+        "🇯🇵 Oracle Cloud Infrastructure -43",
+        "🇯🇵 Oracle Cloud Infrastructure -44",
+        "🇯🇵 Vultr Holdings LLC -45",
+        "🇰🇷 Chungbukbonbujang -46",
+        "🇰🇷 Korea Telecom -47",
+        "🇰🇷 Kornet -48",
+        "🇰🇷 Kornet -49",
+        "🇰🇷 Kornet -50",
+        "🇰🇷 Korea Telecom -51",
+        "🇰🇷 Kornet -52",
+        "🇰🇷 Kornet -53",
+        "🇰🇷 Kornet -54",
+        "🇰🇷 Chungbukbonbujang -55",
+        "🇰🇷 Korea Telecom -56",
+        "🇰🇷 Kornet -57",
+        "🇰🇷 Kornet -58",
+        "🇰🇷 Kornet -59",
+        "🇰🇷 Kornet -60",
+        "🇰🇷 HVGyeongnam -61",
+        "❓ - -62",
+        "❓ - -63",
+        "🇨🇦 OVH Hosting Inc. -64",
+        "🇩🇪 OVH GmbH -65",
+        "🇩🇪 OVH GmbH -66",
+        "🇩🇪 OVH GmbH -67",
+        "🇪🇸 Melbikomas UAB -68",
+        "🇪🇸 First Server Limited -69",
+        "🇫🇮 As56971 -70",
+        "🇳🇱 TIG -71",
+        "🇳🇱 Frontier Limited -72",
+        "🇵🇱 Begin Tokenend Token -73",
+        "🇷🇺 TimeWeb Ltd -74",
+        "🇸🇪 Aeza International LTD -75"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "WhatsApp",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "GAMESMAX(ML/FF/AOV)",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Route Port Game",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Option ADs",
+      "outbounds": [
+        "block",
+        "Internet"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Option P0rn",
+      "outbounds": [
+        "block",
+        "Internet"
+      ]
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇩 Telekomunikasi Indonesia -1",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "094e1339-e59a-4bf8-8ef9-0fab910f3b50",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/36.95.152.58-12137;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇩 AWS EC2 -2",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "e9ca7f8d-4d25-4dcd-a05c-4a0884345b99",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/43.218.77.16-1443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇩 AWS EC2 -3",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "04ca88a3-23f5-4724-af14-bc34425988c6",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/43.218.77.16-443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇩 Rumahweb -4",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "d06cc0f3-b7af-42b9-988a-62c280e1b3a3",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/203.194.112.119-8443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇩 Rumahweb -5",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "aa8c5b88-7773-4891-bf5f-97c7ec39cd4f",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/203.194.112.119-2053;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇩 Telekomunikasi Indonesia -6",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "bdf602ac-0433-42a1-9811-3c94cb0ce714",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/36.95.152.58-12137",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇩 AWS EC2 -7",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "55880569-50f5-45b0-ad2a-6ed77eddb6cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/43.218.77.16-1443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇩 AWS EC2 -8",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "e7d325dc-f436-443c-b197-9846e02782d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/43.218.77.16-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇩 Rumahweb -9",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "55c3e0e5-350b-485b-b8e2-fef58bb06803",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/203.194.112.119-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇩 Rumahweb -10",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "e5b92d13-2b65-4305-925e-2f5dced4a103",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/203.194.112.119-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 Telekomunikasi Indonesia -11",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "1bccaaf1-1bbe-4cc3-b2cb-626b47d8df71",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/36.95.152.58-12137",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 AWS EC2 -12",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "35874799-ef7b-4808-bca7-1b7c13711f3c",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/43.218.77.16-1443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 AWS EC2 -13",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "72b68836-52fe-4a20-85e0-c7197087716a",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/43.218.77.16-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 Rumahweb -14",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "59546191-f581-43bc-99bc-b0aa1e2c33bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/203.194.112.119-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 Rumahweb -15",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "920974e0-e937-4c16-80c3-16be6c4b483e",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/203.194.112.119-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 Oracle Public Cloud -16",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "7042f38e-e101-4afa-a71e-0403a658f89b",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/168.138.181.188-61731",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 DigitalOcean LLC -17",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "7b533518-7b2c-49e7-925e-f0571ad6dad6",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/104.248.145.216-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 Melbikomas UAB -18",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "43a54b61-8435-4b39-993b-13b18a424d85",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/91.192.81.154-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 Akile LTD -19",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "62e052d1-ddb3-4ee8-87c1-432b13955e4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/185.81.28.95-30503",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 First Server Limited -20",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "35fd1ef4-e4c5-4502-a084-6d6366476b75",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/194.36.179.17-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 Oracle Public Cloud -21",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "4ae07256-d8d1-4077-8b07-bd0bb96af71c",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/168.138.181.188-61731",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 DigitalOcean LLC -22",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "cdb3cf5b-e889-4164-9add-ee018db9fbd4",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/104.248.145.216-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 Melbikomas UAB -23",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "0d460b2e-954c-4ae3-b930-794d196c6260",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/91.192.81.154-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 Akile LTD -24",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "e463c110-37a4-4d39-915b-94c874403127",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/185.81.28.95-30503",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 First Server Limited -25",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "c5c55905-571d-479e-9daf-a76cf10b972a",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/194.36.179.17-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 Oracle Public Cloud -26",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "f9032313-be88-4c2e-82f3-3f429b103660",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/168.138.181.188-61731;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 Melbikomas UAB -27",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "a3a56faa-99e3-4de6-81a3-c9f49f518677",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/91.192.81.154-8443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 Akile LTD -28",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "fda0f0a5-34ec-4eb6-8670-81d8b3e17f8c",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/185.81.28.95-30503;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇸🇬 First Server Limited -29",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "66ad2722-8736-47b2-84b3-d4a376f24154",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/194.36.179.17-2053;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -30",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "37fea982-c917-40fb-81d8-1e097cdb4a65",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/152.70.82.101-18650",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Vultr Holdings LLC -31",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "c41ba309-d9ff-4e80-ac8e-134818130659",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/108.160.139.154-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Microsoft Azure Cloud -32",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "ef9da5f8-76dd-4959-a27d-f431fc3cc8f4",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/20.243.85.49-10443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -33",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "f812b876-a54e-45ff-a631-ff12d6000bb6",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/140.238.62.82-1443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -34",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "6061579b-151a-4ee6-a237-c817c4242879",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/140.83.57.114-25965",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -35",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "e09f9b4b-0efb-4d89-ae3e-2efaf75065a3",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/152.70.82.101-18650",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Vultr Holdings LLC -36",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "6d302c1f-9dde-40be-8a64-2079fcd562d0",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/108.160.139.154-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Microsoft Azure Cloud -37",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "622a7c64-2b58-4aa1-b7b7-8c598436b91f",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/20.243.85.49-10443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -38",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "93572979-d599-4abf-8437-497ccc2a6ea1",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/140.238.62.82-1443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -39",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "c65ef55a-bbed-474a-a7e6-4127704daa3e",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/140.83.57.114-25965",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -40",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "42246627-d46b-4501-bab0-4fdf49d5d11f",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/152.70.82.101-18650;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Vultr Holdings LLC -41",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "b483340f-728a-4a44-b702-2abc82a2f353",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/108.160.139.154-8443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Microsoft Azure Cloud -42",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "27094d06-9fd1-4091-bfe1-290a554909d1",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/20.243.85.49-10443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -43",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "5e2a1b49-be11-4cc8-8250-c8831dac667e",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/140.238.62.82-1443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 Oracle Cloud Infrastructure -44",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "365f4e80-d189-41a6-8cbd-588e6303b3e5",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/140.83.57.114-25965;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇯🇵 Vultr Holdings LLC -45",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "58382a54-1595-4734-afdb-8844ef0b825e",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/149.28.21.106-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Chungbukbonbujang -46",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "6efcc67a-0f86-4d35-a1e3-85f31eb71084",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/121.155.154.142-14807;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Korea Telecom -47",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "6ed0cc9a-1e4f-4741-b7e3-a73606760df2",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/121.162.14.67-22480;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Kornet -48",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "d9c25c08-7fef-40ea-813a-311d5ca1a0be",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/112.170.112.178-27023;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Kornet -49",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "ed7b098f-6d50-42ad-9445-135d65612b9e",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/112.170.112.178-27248;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Kornet -50",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "aa8008c1-75ed-4b59-af14-11a0da347962",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/112.170.112.178-27621;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 Korea Telecom -51",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "68265331-98bf-4bd9-a4b9-6197ccf4c7e3",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/121.162.14.67-22480",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 Kornet -52",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "052f31b8-0c06-4e8c-a7ad-a203f80b0f7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27023",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 Kornet -53",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "fcc81691-59cc-4096-8952-77ee88becd53",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27248",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 Kornet -54",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "8b89f503-b74a-4f1d-9759-c50086135307",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27621",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 Chungbukbonbujang -55",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "6441af43-3f22-4858-9ef3-c9c35ec56d7e",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/121.155.154.142-14807",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 Korea Telecom -56",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "bbf13bc7-4f8d-499f-b377-72f024bf456f",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/121.162.14.67-22480",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 Kornet -57",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "9e157916-794a-411f-9ad1-0c9e0992eab8",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27023",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 Kornet -58",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "b4ea7d2c-2e58-484e-b228-b17150ead9e5",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27248",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 Kornet -59",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "2e7890be-18d1-4fff-a47e-83326b174c76",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/112.170.112.178-27621",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 Kornet -60",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "9ad3e555-545d-4716-998e-1a4cba76a747",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/210.97.74.126-50000;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 HVGyeongnam -61",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "ac62a41d-531e-4db2-9905-3ac724702ec9",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/115.40.244.240-11211;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "❓ - -62",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "e62edf2b-e3f6-465a-9640-ad2209c6e061",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/104.248.145.216-443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "trojan",
+      "tag": "❓ - -63",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "62f14cd1-7f38-40ac-acfe-4b5bd5351855",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/121.155.154.142-14807",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 OVH Hosting Inc. -64",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "e48762de-2f5f-4f38-bae2-5cf2bd739eb3",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/51.161.8.236-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 OVH GmbH -65",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "b233a601-a14e-4eee-bbae-688409431f94",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/51.195.46.94-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 OVH GmbH -66",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "ce45abe8-62a6-48d8-addc-c01065a008e2",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/57.129.47.59-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 OVH GmbH -67",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "1fac4cf0-5e54-4752-8e04-16c67f19526d",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/51.195.119.175-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 Melbikomas UAB -68",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "93df8954-acd9-434b-b07c-ccc352fbcacf",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/5.188.181.226-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 First Server Limited -69",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "2209dbdb-62bf-436a-b32c-5a9ff5afb931",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/185.114.72.31-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇮 As56971 -70",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "b16ea775-abb7-474e-a965-44b89b83fa18",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/193.164.155.27-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 TIG -71",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "fb32f9f3-9315-445f-b0e7-261d9549d2cd",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/5.255.120.214-8443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 Frontier Limited -72",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "f4d53a81-bcef-4a54-a0f2-668076a16d28",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/195.200.16.44-443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 Begin Tokenend Token -73",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "53275c81-5a32-41e9-a8d7-4f1499013433",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/45.149.63.135-2053;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇺 TimeWeb Ltd -74",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "method": "none",
+      "password": "70f1c46e-c7fd-4140-ac89-3e019ff8a0b0",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "mux=0;path=/77.232.128.136-8443;host=admin.ari-andika2.site;tls;sni=admin.ari-andika2.site;encryption=none"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇪 Aeza International LTD -75",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "924edbe4-bd08-4035-8b76-468ef15f1219",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/62.60.231.227-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "final": "Internet",
+    "geoip": {
+      "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
+      "download_detour": "Best Latency"
+    },
+    "geosite": {
+      "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
+      "download_detour": "Best Latency"
+    },
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "outbound": "block"
+      },
+      {
+        "network": "udp",
+        "port": [
+          443
+        ],
+        "outbound": "block"
+      },
+      {
+        "domain_suffix": [
+          "googlesyndication.com"
+        ],
+        "outbound": "Internet"
+      },
+      {
+        "geosite": [
+          "rule-ads",
+          "oisd-full"
+        ],
+        "outbound": "Option ADs"
+      },
+      {
+        "geosite": [
+          "oisd-nsfw",
+          "category-porn"
+        ],
+        "outbound": "Option P0rn"
+      },
+      {
+        "geosite": "whatsapp",
+        "outbound": "WhatsApp"
+      },
+      {
+        "geoip": "facebook",
+        "port": [
+          3478,
+          4244,
+          5222,
+          5223,
+          5242,
+          45395,
+          50318,
+          59234
+        ],
+        "outbound": "WhatsApp"
+      },
+      {
+        "protocol": "stun",
+        "outbound": "Internet"
+      },
+      {
+        "geosite": [
+          "rule-indo"
+        ],
+        "outbound": "Lock Region ID"
+      },
+      {
+        "network": "udp",
+        "port": [
+          2702,
+          3702,
+          8443,
+          9120,
+          9992,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          8008,
+          8130,
+          8443,
+          9008,
+          9120,
+          10100,
+          12008,
+          13008,
+          8011,
+          9030,
+          10491,
+          10612,
+          12235,
+          13004,
+          13748,
+          17000,
+          17500,
+          10039,
+          10096,
+          11455,
+          13894,
+          13972
+        ],
+        "port_range": [
+          "4001:4009",
+          "5000:5221",
+          "5224:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5517:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10015",
+          "11000:11019",
+          "10101:10201",
+          "10080:10110",
+          "17000:18000"
+        ],
+        "outbound": "GAMESMAX(ML/FF/AOV)"
+      },
+      {
+        "network": "tcp",
+        "port": [
+          5517,
+          8443,
+          9443,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          9006,
+          9137,
+          12006,
+          12008,
+          13006,
+          15006,
+          20561,
+          39003,
+          39006,
+          39698,
+          39779,
+          39800,
+          10012,
+          14000,
+          15692,
+          17000,
+          17500,
+          18081,
+          20371,
+          8013,
+          8085,
+          18082,
+          20000,
+          50000,
+          65010,
+          65050,
+          8013,
+          18082,
+          20166,
+          31003,
+          33445,
+          50000,
+          42472,
+          14422,
+          16999,
+          8013,
+          8888,
+          30031,
+          14009,
+          40005,
+          9339,
+          2099,
+          8088,
+          5692,
+          8085,
+          8500,
+          10000,
+          10082,
+          20000,
+          25000,
+          29134,
+          31003
+        ],
+        "port_range": [
+          "5000:5221",
+          "5224:5227",
+          "5229:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5520:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10012",
+          "11000:11019",
+          "8085:8088",
+          "10000:10019",
+          "20000:20002",
+          "10000:10001",
+          "20000:20001",
+          "9330:9340",
+          "2080:2099",
+          "9100:9200",
+          "8230:8250",
+          "8110:8120",
+          "27000:28998",
+          "7770:7790",
+          "44590:44610",
+          "10500:10515",
+          "27015:27030",
+          "27036:27037",
+          "39190:39200",
+          "49001:49190",
+          "8393:8400"
+        ],
+        "outbound": "Route Port Game"
+      },
+      {
+        "network": "udp",
+        "port": [
+          2702,
+          3702,
+          8443,
+          9120,
+          9992,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          8008,
+          8130,
+          8443,
+          9008,
+          9120,
+          10100,
+          12008,
+          13008,
+          8700,
+          10013,
+          10019,
+          10039,
+          10096,
+          10491,
+          10612,
+          11455,
+          12235,
+          13748,
+          13894,
+          13972,
+          17000,
+          17500,
+          8700,
+          9030,
+          8011,
+          9030,
+          10491,
+          10612,
+          12235,
+          13004,
+          13748,
+          17000,
+          17500,
+          10039,
+          10096,
+          11455,
+          13894,
+          13972,
+          42472,
+          5100,
+          39000,
+          4380,
+          27036,
+          14422,
+          16999,
+          8013,
+          8888,
+          8000,
+          30104,
+          14009,
+          40005,
+          8088,
+          5010,
+          6650,
+          8011,
+          8700,
+          20000,
+          25000,
+          29134,
+          30000
+        ],
+        "port_range": [
+          "4001:4009",
+          "5000:5221",
+          "5224:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5517:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10015",
+          "11000:11019",
+          "7086:7995",
+          "8011:8013",
+          "9030:9031",
+          "20000:20002",
+          "12070:12460",
+          "41182:41192",
+          "7500:7995",
+          "10010:10019",
+          "20000:20001",
+          "10101:10201",
+          "10080:10110",
+          "17000:18000",
+          "5055:5058",
+          "22101:22102",
+          "9330:9340",
+          "27000:28998",
+          "16300:16350",
+          "40000:40010",
+          "60970:60980",
+          "27000:27031",
+          "40000:40010",
+          "7000:8000",
+          "8180:8181",
+          "27016:27024",
+          "54000:54012"
+        ],
+        "outbound": "Route Port Game"
+      },
+      {
+        "geoip": [
+          "id"
+        ],
+        "port": [
+          21,
+          22,
+          23,
+          80,
+          81,
+          123,
+          143,
+          182,
+          183,
+          194,
+          443,
+          465,
+          587,
+          853,
+          993,
+          995,
+          998,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2095,
+          2096,
+          5222,
+          5228,
+          5229,
+          5230,
+          8000,
+          8080,
+          8081,
+          8088,
+          8443,
+          8880,
+          8883,
+          8888,
+          8889,
+          42069
+        ],
+        "outbound": "Lock Region ID"
+      },
+      {
+        "port": [
+          21,
+          22,
+          23,
+          80,
+          81,
+          123,
+          143,
+          182,
+          183,
+          194,
+          443,
+          465,
+          587,
+          853,
+          993,
+          995,
+          998,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2095,
+          2096,
+          5222,
+          5228,
+          5229,
+          5230,
+          8000,
+          8080,
+          8081,
+          8088,
+          8443,
+          8880,
+          8883,
+          8888,
+          8889,
+          42069
+        ],
+        "outbound": "Internet"
+      },
+      {
+        "port_range": [
+          "1023:42068",
+          "42070:65535"
+        ],
+        "outbound": "Route Port Game"
+      }
+    ]
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": false
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "yacd"
+    }
+  }
+}
