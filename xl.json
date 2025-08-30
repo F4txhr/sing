@@ -151,6 +151,8 @@
         "Latency ID",
         "Latency SG",
         "direct 🚸",
+        "🇸🇬 Dromatics Systems Pte Ltd",
+        "🇮🇩 Telekomunikasi Indonesia -19",
         "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
         "🇮🇩 (ID) Amazon.com 2",
         "🇮🇩 (ID) Amazon.com 3",
@@ -226,6 +228,8 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds": [
+        "🇸🇬 Dromatics Systems Pte Ltd",
+        "🇮🇩 Telekomunikasi Indonesia -19",
         "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
         "🇮🇩 (ID) Amazon.com 2",
         "🇮🇩 (ID) Amazon.com 3",
@@ -255,6 +259,7 @@
       "type": "urltest",
       "tag": "Latency ID",
       "outbounds": [
+        "🇮🇩 Telekomunikasi Indonesia -19",
         "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
         "🇮🇩 (ID) Amazon.com 2",
         "🇮🇩 (ID) Amazon.com 3",
@@ -274,6 +279,7 @@
       "type": "urltest",
       "tag": "Latency SG",
       "outbounds": [
+        "🇸🇬 Dromatics Systems Pte Ltd",
         "🇸🇬 (SG) FIRST SERVER LIMITED 4",
         "🇸🇬 (SG) AKILE LTD 1",
         "🇸🇬 (SG) Melbikomas UAB 2",
@@ -309,9 +315,70 @@
       "default": "🚫"
     },
     {
+      "tag": "🇸🇬 Dromatics Systems Pte Ltd",
+      "type": "trojan",
+      "server": "quiz.vidio.com",
+      "server_port": 443,
+      "password": "2bcfbfba-b446-4ad5-93ad-72af9e008f61",
+      "tls": {
+        "enabled": true,
+        "server_name": "worker.my.id",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/free/103.195.191.55:443",
+        "headers": {
+          "Host": "worker.my.id"
+        }
+      },
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 Telekomunikasi Indonesia -19",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "30c0a42b-eb06-4252-951e-7837a8e3e3ef",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/36.95.152.58-12137",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇩 AWS EC2 -2",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "f49b6bc6-6909-4327-9469-5c7d866c522f",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/43.218.77.16-1443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        }
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇸🇬 (SG) FIRST SERVER LIMITED 4",
-      "server": "quiz.int.vidio.com",
+      "server": "quiz.vidio.com",
       "server_port": 443,
       "uuid": "f4d1e2e4-61c4-4444-bea5-311356f2b81f",
       "tls": {
