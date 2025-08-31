@@ -151,29 +151,11 @@
         "Latency ID",
         "Latency SG",
         "direct 🚸",
-        "🇸🇬 Dromatics Systems Pte Ltd",
-        "🇮🇩 Telekomunikasi Indonesia -19",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
-        "🇮🇩 (ID) Amazon.com 2",
-        "🇮🇩 (ID) Amazon.com 3",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 4",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 5",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 6",
-        "🇮🇩 (ID) Amazon.com 7",
-        "🇮🇩 (ID) Amazon.com 8",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 9",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 10",
-        "🇸🇬 (SG) FIRST SERVER LIMITED 4",
-        "🇸🇬 (SG) AKILE LTD 1",
+        "🇸🇬 (SG) DigitalOcean 1",
         "🇸🇬 (SG) Melbikomas UAB 2",
-        "🇸🇬 (SG) Melbikomas UAB 3",
-        "🇸🇬 (SG) DigitalOcean 4",
-        "🇸🇬 (SG) Oracle Public Cloud 5",
-        "🇸🇬 (SG) AKILE LTD 6",
-        "🇸🇬 (SG) Melbikomas UAB 7",
-        "🇸🇬 (SG) Melbikomas UAB 8",
-        "🇸🇬 (SG) DigitalOcean 9",
-        "🇸🇬 (SG) Oracle Public Cloud 10"
+        "🇸🇬 (SG) Oracle Corporation 3",
+        "🇸🇬 (SG) Melbikomas UAB 4",
+        "🇸🇬 (SG) AKILE LTD 5"
       ],
       "default": "Best Latency 🚀"
     },
@@ -214,7 +196,7 @@
     },
     {
       "type": "selector",
-      "tag": "GAME",
+      "tag": "GAME 🎮",
       "outbounds": [
         "region ID",
         "Best Latency 🚀",
@@ -227,31 +209,13 @@
     {
       "type": "urltest",
       "tag": "Best Latency 🚀",
-      "outbounds": [
-        "🇸🇬 Dromatics Systems Pte Ltd",
-        "🇮🇩 Telekomunikasi Indonesia -19",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
-        "🇮🇩 (ID) Amazon.com 2",
-        "🇮🇩 (ID) Amazon.com 3",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 4",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 5",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 6",
-        "🇮🇩 (ID) Amazon.com 7",
-        "🇮🇩 (ID) Amazon.com 8",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 9",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 10",
-        "🇸🇬 (SG) FIRST SERVER LIMITED 4",
-        "🇸🇬 (SG) AKILE LTD 1",
+      "outbounds":[
+        "🇸🇬 (SG) DigitalOcean 1",
         "🇸🇬 (SG) Melbikomas UAB 2",
-        "🇸🇬 (SG) Melbikomas UAB 3",
-        "🇸🇬 (SG) DigitalOcean 4",
-        "🇸🇬 (SG) Oracle Public Cloud 5",
-        "🇸🇬 (SG) AKILE LTD 6",
-        "🇸🇬 (SG) Melbikomas UAB 7",
-        "🇸🇬 (SG) Melbikomas UAB 8",
-        "🇸🇬 (SG) DigitalOcean 9",
-        "🇸🇬 (SG) Oracle Public Cloud 10"
-      ],
+        "🇸🇬 (SG) Oracle Corporation 3",
+        "🇸🇬 (SG) Melbikomas UAB 4",
+        "🇸🇬 (SG) AKILE LTD 5"
+       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "20s"
     },
@@ -259,40 +223,21 @@
       "type": "urltest",
       "tag": "Latency ID",
       "outbounds": [
-        "🇮🇩 Telekomunikasi Indonesia -19",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
-        "🇮🇩 (ID) Amazon.com 2",
-        "🇮🇩 (ID) Amazon.com 3",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 4",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 5",
-        "🇮🇩 (ID) PT Telekomunikasi Indonesia 6",
-        "🇮🇩 (ID) Amazon.com 7",
-        "🇮🇩 (ID) Amazon.com 8",
-        "🇮🇩 (ID) PT Pusat Media Indonesia 9",
-        "🇮🇩 (ID) CV. Rumahweb Indonesia 10",
         "direct 🚸"
-      ],
+        ],
       "url": "https://www.youtube.com/generate_204",
       "interval": "20s"
     },
     {
       "type": "urltest",
       "tag": "Latency SG",
-      "outbounds": [
-        "🇸🇬 Dromatics Systems Pte Ltd",
-        "🇸🇬 (SG) FIRST SERVER LIMITED 4",
-        "🇸🇬 (SG) AKILE LTD 1",
+      "outbounds":[
+        "🇸🇬 (SG) DigitalOcean 1",
         "🇸🇬 (SG) Melbikomas UAB 2",
-        "🇸🇬 (SG) Melbikomas UAB 3",
-        "🇸🇬 (SG) DigitalOcean 4",
-        "🇸🇬 (SG) Oracle Public Cloud 5",
-        "🇸🇬 (SG) AKILE LTD 6",
-        "🇸🇬 (SG) Melbikomas UAB 7",
-        "🇸🇬 (SG) Melbikomas UAB 8",
-        "🇸🇬 (SG) DigitalOcean 9",
-        "🇸🇬 (SG) Oracle Public Cloud 10",
-        "direct 🚸"
-      ],
+        "🇸🇬 (SG) Oracle Corporation 3",
+        "🇸🇬 (SG) Melbikomas UAB 4",
+        "🇸🇬 (SG) AKILE LTD 5"
+       ],
       "url": "https://cp.cloudflare.com/generate_204",
       "interval": "20s"
     },
@@ -315,424 +260,15 @@
       "default": "🚫"
     },
     {
-      "tag": "🇸🇬 Dromatics Systems Pte Ltd",
       "type": "trojan",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "password": "2bcfbfba-b446-4ad5-93ad-72af9e008f61",
-      "tls": {
-        "enabled": true,
-        "server_name": "worker.my.id",
-        "insecure": true,
-        "disable_sni": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/free/103.195.191.55:443",
-        "headers": {
-          "Host": "worker.my.id"
-        }
-      },
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇩 Telekomunikasi Indonesia -19",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "uuid": "30c0a42b-eb06-4252-951e-7837a8e3e3ef",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/36.95.152.58-12137",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇩 AWS EC2 -2",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "uuid": "f49b6bc6-6909-4327-9469-5c7d866c522f",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/43.218.77.16-1443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇬 (SG) FIRST SERVER LIMITED 4",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "f4d1e2e4-61c4-4444-bea5-311356f2b81f",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/194.36.179.17-2053",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        }
-      }
-    },
-    {
-      "type": "direct",
-      "tag": "direct 🚸"
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) PT Telekomunikasi Indonesia 1",
+      "tag": "🇸🇬 (SG) DigitalOcean 1",
       "domain_strategy": "ipv4_only",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "password": "1e73cdb7-5fe7-4bc8-81b4-25ca6a30978d",
+      "password": "aedf9be2-db92-47e6-8888-1d37b1b683b3",
       "tls": {
         "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/36.95.152.58-12137",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) Amazon.com 2",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "0542761e-0172-4f51-8397-9f16b62e0408",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/43.218.77.16-1443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) Amazon.com 3",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "799dc046-898c-4a4c-a7f6-46222f226a6e",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/43.218.77.16-443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) PT Pusat Media Indonesia 4",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "597771fd-a7f9-4f80-8198-f9e2065f1335",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/103.6.207.108-8080",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) CV. Rumahweb Indonesia 5",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "6194eb89-f9b2-45c5-8b6e-caecb5538655",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/203.194.112.119-8443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) PT Telekomunikasi Indonesia 6",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "8d4c7e46-1153-4627-8761-f8f8778e04f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/36.95.152.58-12137",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) Amazon.com 7",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "9265b88b-57e3-4de6-b555-65d241c726c9",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/43.218.77.16-1443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) Amazon.com 8",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "8e58d90d-0811-469f-ad51-8e5f502dc4f4",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/43.218.77.16-443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) PT Pusat Media Indonesia 9",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "5fb7ca2d-ae8c-4c97-aabb-1b7d99f8c875",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/103.6.207.108-8080",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇮🇩 (ID) CV. Rumahweb Indonesia 10",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "8cd8d0c1-8131-4d34-91dc-808fd58989ea",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/203.194.112.119-8443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) AKILE LTD 6",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "f1405bcd-b736-444e-98f2-56e70b8373fe",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/185.81.28.95-30503",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) Melbikomas UAB 7",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "e51ec6d4-49cd-4711-84fa-66db57ac9297",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/91.192.81.154-2053",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) Melbikomas UAB 8",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "eb470960-101a-43b9-b87a-f4703cb3a505",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/91.192.81.154-8443",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) DigitalOcean 9",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "00689c22-b2ef-4a99-8d5a-f283e6d9f11b",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
+        "server_name": "gendar.ariyeldlacasa.workers.dev",
         "insecure": true
       },
       "multiplex": {
@@ -743,57 +279,7 @@
         "type": "ws",
         "path": "/104.248.145.216-443",
         "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) Oracle Public Cloud 10",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "883ae76f-1e81-4352-8535-28acabb8690c",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/168.138.181.188-61731",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) AKILE LTD 1",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "7f8c9016-718c-4d14-b0ef-5c98d35993e5",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/185.81.28.95-30503",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
+          "Host": "gendar.ariyeldlacasa.workers.dev"
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
@@ -804,35 +290,10 @@
       "domain_strategy": "ipv4_only",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "password": "6fd962c5-cc5a-4be2-8faf-ae0d85d60e70",
+      "password": "513f23ec-1cb7-4d5f-af3a-f7ce3133cd4a",
       "tls": {
         "enabled": true,
-        "server_name": "admin.ari-andika2.site",
-        "insecure": true
-      },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/91.192.81.154-2053",
-        "headers": {
-          "Host": "admin.ari-andika2.site"
-        },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇸🇬 (SG) Melbikomas UAB 3",
-      "domain_strategy": "ipv4_only",
-      "server": "quiz.int.vidio.com",
-      "server_port": 443,
-      "password": "c0141ca7-ac6e-4bf3-9512-88968cf18fd8",
-      "tls": {
-        "enabled": true,
-        "server_name": "admin.ari-andika2.site",
+        "server_name": "gendar.ariyeldlacasa.workers.dev",
         "insecure": true
       },
       "multiplex": {
@@ -843,21 +304,21 @@
         "type": "ws",
         "path": "/91.192.81.154-8443",
         "headers": {
-          "Host": "admin.ari-andika2.site"
+          "Host": "gendar.ariyeldlacasa.workers.dev"
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "trojan",
-      "tag": "🇸🇬 (SG) DigitalOcean 4",
+      "tag": "🇸🇬 (SG) Oracle Corporation 3",
       "domain_strategy": "ipv4_only",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "password": "028ca963-fd45-449c-9277-f54a7280de99",
+      "password": "4199c8f2-8f26-4a7b-8779-1dfba73747e8",
       "tls": {
         "enabled": true,
-        "server_name": "admin.ari-andika2.site",
+        "server_name": "gendar.ariyeldlacasa.workers.dev",
         "insecure": true
       },
       "multiplex": {
@@ -866,23 +327,23 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/104.248.145.216-443",
+        "path": "/129.150.49.58-18650",
         "headers": {
-          "Host": "admin.ari-andika2.site"
+          "Host": "gendar.ariyeldlacasa.workers.dev"
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "trojan",
-      "tag": "🇸🇬 (SG) Oracle Public Cloud 5",
+      "tag": "🇸🇬 (SG) Melbikomas UAB 4",
       "domain_strategy": "ipv4_only",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "password": "ef22e874-b140-4fca-a74d-599fa91f587f",
+      "password": "febd9285-83bf-4da0-992c-caa8fdd80f25",
       "tls": {
         "enabled": true,
-        "server_name": "admin.ari-andika2.site",
+        "server_name": "gendar.ariyeldlacasa.workers.dev",
         "insecure": true
       },
       "multiplex": {
@@ -891,12 +352,41 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/168.138.181.188-61731",
+        "path": "/91.192.81.154-2053",
         "headers": {
-          "Host": "admin.ari-andika2.site"
+          "Host": "gendar.ariyeldlacasa.workers.dev"
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 (SG) AKILE LTD 5",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "password": "6d700b85-6b2e-403b-95bb-d8b152fd7bfc",
+      "tls": {
+        "enabled": true,
+        "server_name": "gendar.ariyeldlacasa.workers.dev",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/185.81.28.95-30503",
+        "headers": {
+          "Host": "gendar.ariyeldlacasa.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct 🚸"
     },
     {
       "type": "block",
@@ -914,7 +404,7 @@
           "geosite-malicious",
           "geoip-malicious"
         ],
-        "action": "reject"
+        "outbound": "🚫"
       },
       {
         "rule_set": [
@@ -970,7 +460,7 @@
       },
       {
         "geoip": "private",
-        "outbound": "direct"
+        "outbound": "direct 🚸"
       }
     ],
     "rule_set": [
