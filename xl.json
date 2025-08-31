@@ -155,7 +155,12 @@
         "🇸🇬 (SG) Melbikomas UAB 2",
         "🇸🇬 (SG) Oracle Corporation 3",
         "🇸🇬 (SG) Melbikomas UAB 4",
-        "🇸🇬 (SG) AKILE LTD 5"
+        "🇸🇬 (SG) AKILE LTD 5",
+        "🇸🇬 (SG) Oracle Corporation 6",
+        "🇸🇬 (SG) DigitalOcean 7",
+        "🇸🇬 (SG) Oracle Public Cloud 8",
+        "🇸🇬 (SG) FIRST SERVER LIMITED 9",
+        "🇸🇬 (SG) Amazon Data Services Singapore 10"
       ],
       "default": "Best Latency 🚀"
     },
@@ -214,7 +219,12 @@
         "🇸🇬 (SG) Melbikomas UAB 2",
         "🇸🇬 (SG) Oracle Corporation 3",
         "🇸🇬 (SG) Melbikomas UAB 4",
-        "🇸🇬 (SG) AKILE LTD 5"
+        "🇸🇬 (SG) AKILE LTD 5",
+        "🇸🇬 (SG) Oracle Corporation 6",
+        "🇸🇬 (SG) DigitalOcean 7",
+        "🇸🇬 (SG) Oracle Public Cloud 8",
+        "🇸🇬 (SG) FIRST SERVER LIMITED 9",
+        "🇸🇬 (SG) Amazon Data Services Singapore 10"
        ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "20s"
@@ -236,7 +246,12 @@
         "🇸🇬 (SG) Melbikomas UAB 2",
         "🇸🇬 (SG) Oracle Corporation 3",
         "🇸🇬 (SG) Melbikomas UAB 4",
-        "🇸🇬 (SG) AKILE LTD 5"
+        "🇸🇬 (SG) AKILE LTD 5",
+        "🇸🇬 (SG) Oracle Corporation 6",
+        "🇸🇬 (SG) DigitalOcean 7",
+        "🇸🇬 (SG) Oracle Public Cloud 8",
+        "🇸🇬 (SG) FIRST SERVER LIMITED 9",
+        "🇸🇬 (SG) Amazon Data Services Singapore 10"
        ],
       "url": "https://cp.cloudflare.com/generate_204",
       "interval": "20s"
@@ -383,6 +398,136 @@
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 (SG) Oracle Corporation 6",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "48fdca64-4208-4f07-ad20-e733ed273031",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/146.235.19.79-28983",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 (SG) DigitalOcean 7",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "cb8565a7-f999-4bdd-9181-40fb7916a7d2",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/178.128.80.43-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 (SG) Oracle Public Cloud 8",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "67ef91fb-1966-4e71-b8d1-e54d439678bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/168.138.181.188-61731",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 (SG) FIRST SERVER LIMITED 9",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "e66819ef-0c1e-4ccc-816d-0d927e51864e",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/194.36.179.17-2053",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 (SG) Amazon Data Services Singapore 10",
+      "domain_strategy": "ipv4_only",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "2ff5bfe9-3be0-481d-a06d-828cb2502c2a",
+      "tls": {
+        "enabled": true,
+        "server_name": "admin.ari-andika2.site",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/13.250.14.76-443",
+        "headers": {
+          "Host": "admin.ari-andika2.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
     },
     {
       "type": "direct",
