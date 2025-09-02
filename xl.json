@@ -151,6 +151,7 @@
         "Latency ID",
         "Latency SG",
         "direct 🚸",
+        "vless-d93bb492",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vmess",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vless",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 trojan",
@@ -275,6 +276,7 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds":[
+        "vless-d93bb492",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vmess",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vless",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 trojan",
@@ -362,6 +364,7 @@
       "type": "urltest",
       "tag": "Latency SG",
       "outbounds":[
+        "vless-d93bb492",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vmess",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 vless",
         "(SG) Tencent Building Kejizhongyi Avenue [img.email1.vidio.com] 1 trojan",
@@ -453,6 +456,26 @@
         "Internet"
       ],
       "default": "🚫"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-d93bb492",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "flow": "",
+      "transport": {
+        "path": "/?ed=43.156.116.194:443",
+        "headers": {
+          "Host": "a.akunkai422.workers.dev"
+        },
+        "type": "ws"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "a.akunkai422.workers.dev",
+        "insecure": true
+      }
     },
     {
       "type": "vmess",
