@@ -254,18 +254,18 @@
       "tag": "SG - A",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "uuid": "e1ee79c6-74b4-4351-8111-a8b0d5502bbd",
       "flow": "",
       "transport": {
-        "path": "/?ed=43.156.116.194:443",
+        "path": "/?ed=91.192.81.154:2053",
         "headers": {
-          "Host": "a.akunkai422.workers.dev"
+          "Host": "badakberenangx.akunkai422.workers.dev"
         },
         "type": "ws"
       },
       "tls": {
         "enabled": true,
-        "server_name": "a.akunkai422.workers.dev",
+        "server_name": "badakberenangx.akunkai422.workers.dev",
         "insecure": true
       }
     },
