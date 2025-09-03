@@ -151,7 +151,8 @@
         "Latency ID",
         "Latency SG",
         "direct 🚸",
-        "vless-d93bb492"
+        "ID - BadakBerenang",
+        "SG - A"
       ],
       "default": "Best Latency 🚀"
     },
@@ -206,7 +207,8 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds":[
-        "vless-d93bb492"
+        "ID - BadakBerenang",
+        "SG - A"
        ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "20s"
@@ -215,7 +217,7 @@
       "type": "urltest",
       "tag": "Latency ID",
       "outbounds": [
-        "direct 🚸"
+        "ID - BadakBerenang"
         ],
       "url": "https://www.youtube.com/generate_204",
       "interval": "20s"
@@ -224,7 +226,7 @@
       "type": "urltest",
       "tag": "Latency SG",
       "outbounds":[
-        "vless-d93bb492"
+        "SG - A"
        ],
       "url": "https://cp.cloudflare.com/generate_204",
       "interval": "20s"
@@ -249,7 +251,7 @@
     },
     {
       "type": "vless",
-      "tag": "vless-d93bb492",
+      "tag": "SG - A",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
       "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
@@ -264,6 +266,26 @@
       "tls": {
         "enabled": true,
         "server_name": "a.akunkai422.workers.dev",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ID - BadakBerenang",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "uuid": "3ae9ae61-a779-4dd9-b0da-0fca45fff28f",
+      "flow": "",
+      "transport": {
+        "path": "/?ed=103.6.207.108:8080",
+        "headers": {
+          "Host": "badakberenang.kaiakun52.workers.dev"
+        },
+        "type": "ws"
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "badakberenang.kaiakun52.workers.dev",
         "insecure": true
       }
     },
