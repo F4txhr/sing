@@ -151,8 +151,13 @@
         "Latency ID",
         "Latency SG",
         "direct 🚸",
-        "ID - BadakBerenang",
-        "SG - A"
+        "SG - A",
+        "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
+        "2 🇮🇩 Amazon.com WS TLS [proxy]",
+        "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]",
+        "1 🇸🇬 Alibaba Cloud - SG WS TLS [proxy]",
+        "2 🇸🇬 Oracle Corporation WS TLS [proxy]",
+        "5 🇸🇬 DigitalOcean WS TLS [proxy]"
       ],
       "default": "Latency SG"
     },
@@ -207,8 +212,13 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds":[
-        "ID - BadakBerenang",
-        "SG - A"
+        "SG - A",
+        "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
+        "2 🇮🇩 Amazon.com WS TLS [proxy]",
+        "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]",
+        "1 🇸🇬 Alibaba Cloud - SG WS TLS [proxy]",
+        "2 🇸🇬 Oracle Corporation WS TLS [proxy]",
+        "5 🇸🇬 DigitalOcean WS TLS [proxy]"
        ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "20s"
@@ -217,7 +227,9 @@
       "type": "urltest",
       "tag": "Latency ID",
       "outbounds": [
-        "ID - BadakBerenang"
+        "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
+        "2 🇮🇩 Amazon.com WS TLS [proxy]",
+        "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]"
         ],
       "url": "https://www.youtube.com/generate_204",
       "interval": "20s"
@@ -226,7 +238,10 @@
       "type": "urltest",
       "tag": "Latency SG",
       "outbounds":[
-        "SG - A"
+        "SG - A",
+        "1 🇸🇬 Alibaba Cloud - SG WS TLS [proxy]",
+        "2 🇸🇬 Oracle Corporation WS TLS [proxy]",
+        "5 🇸🇬 DigitalOcean WS TLS [proxy]"
        ],
       "url": "https://cp.cloudflare.com/generate_204",
       "interval": "20s"
@@ -250,6 +265,54 @@
       "default": "🚫"
     },
     {
+      "method": "none",
+      "password": "4690beec-1316-4a33-90e7-5a7cf5463994",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "tls;mux=0;mode=websocket;path=/203.194.112.119-8443;host=proxy.badakterbangx.my.id",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "tag": "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
+      "type": "shadowsocks"
+    },
+    {
+      "password": "4690beec-1316-4a33-90e7-5a7cf5463994",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "tag": "2 🇮🇩 Amazon.com WS TLS [proxy]",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "proxy.badakterbangx.my.id"
+      },
+      "transport": {
+        "headers": {
+          "Host": "proxy.badakterbangx.my.id"
+        },
+        "path": "/43.218.77.16-1443",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "tag": "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "proxy.badakterbangx.my.id"
+      },
+      "transport": {
+        "headers": {
+          "Host": "proxy.badakterbangx.my.id"
+        },
+        "path": "/36.95.152.58-12137",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "4690beec-1316-4a33-90e7-5a7cf5463994"
+    },
+    {
       "type": "vless",
       "tag": "SG - A",
       "server": "quiz.int.vidio.com",
@@ -270,24 +333,52 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "ID - BadakBerenang",
+      "password": "919de8b3-d78c-42ed-8534-ff995ade2276",
       "server": "quiz.int.vidio.com",
       "server_port": 443,
-      "uuid": "3ae9ae61-a779-4dd9-b0da-0fca45fff28f",
-      "flow": "",
-      "transport": {
-        "path": "/?ed=103.6.207.108:8080",
-        "headers": {
-          "Host": "badakberenang.kaiakun52.workers.dev"
-        },
-        "type": "ws"
-      },
+      "tag": "1 🇸🇬 Alibaba Cloud - SG WS TLS [proxy]",
       "tls": {
         "enabled": true,
-        "server_name": "badakberenang.kaiakun52.workers.dev",
-        "insecure": true
-      }
+        "insecure": true,
+        "server_name": "proxy.badakterbangx.my.id"
+      },
+      "transport": {
+        "headers": {
+          "Host": "proxy.badakterbangx.my.id"
+        },
+        "path": "/47.74.254.191-8900",
+        "type": "ws"
+      },
+      "type": "trojan"
+    },
+    {
+      "method": "none",
+      "password": "919de8b3-d78c-42ed-8534-ff995ade2276",
+      "plugin": "v2ray-plugin",
+      "plugin_opts": "tls;mux=0;mode=websocket;path=/129.150.58.86-57621;host=proxy.badakterbangx.my.id",
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "tag": "2 🇸🇬 Oracle Corporation WS TLS [proxy]",
+      "type": "shadowsocks"
+    },
+    {
+      "server": "quiz.int.vidio.com",
+      "server_port": 443,
+      "tag": "5 🇸🇬 DigitalOcean WS TLS [proxy]",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "proxy.badakterbangx.my.id"
+      },
+      "transport": {
+        "headers": {
+          "Host": "proxy.badakterbangx.my.id"
+        },
+        "path": "/178.128.80.43-443",
+        "type": "ws"
+      },
+      "type": "vless",
+      "uuid": "919de8b3-d78c-42ed-8534-ff995ade2276"
     },
     {
       "type": "direct",
