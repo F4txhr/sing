@@ -176,6 +176,8 @@
       "type": "selector",
       "tag": "CF Workers",
       "outbounds": [
+        "Latency CF Workers",
+        "Trojan UDP",
         "2 🇸🇬 DigitalOcean WS TLS [nautica]"
       ]
     },
@@ -230,6 +232,8 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds": [
+        "2 🇸🇬 DigitalOcean WS TLS [nautica]",
+        "Trojan UDP",
         "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
         "2 🇮🇩 Amazon.com WS TLS [proxy]",
         "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]",
