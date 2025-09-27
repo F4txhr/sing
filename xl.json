@@ -176,8 +176,6 @@
       "type": "selector",
       "tag": "CF Workers",
       "outbounds": [
-        "Latency CF Workers",
-        "Trojan UDP",
         "2 🇸🇬 DigitalOcean WS TLS [nautica]"
       ]
     },
@@ -232,8 +230,6 @@
       "type": "urltest",
       "tag": "Best Latency 🚀",
       "outbounds": [
-        "2 🇸🇬 DigitalOcean WS TLS [nautica]",
-        "Trojan UDP",
         "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
         "2 🇮🇩 Amazon.com WS TLS [proxy]",
         "4 🇮🇩 PT Telekomunikasi Indonesia WS TLS [proxy]",
@@ -340,7 +336,7 @@
       "method": "none",
       "password": "4690beec-1316-4a33-90e7-5a7cf5463994",
       "plugin": "v2ray-plugin",
-      "plugin_opts": "tls;mux=0;mode=websocket;path=/203.194.112.119-8443;host=proxy.badakterbangx.my.id"
+      "plugin_opts": "tls;mux=0;mode=websocket;path=/203.194.112.119-8443;host=proxy.vortex-x.workers.dev"
     },
     {
       "type": "trojan",
@@ -350,14 +346,14 @@
       "password": "4690beec-1316-4a33-90e7-5a7cf5463994",
       "tls": {
         "enabled": true,
-        "server_name": "proxy.badakterbangx.my.id",
+        "server_name": "testproxy.kaiakun52.workers.dev",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/43.218.77.16-1443",
         "headers": {
-          "Host": "proxy.badakterbangx.my.id"
+          "Host": "testproxy.kaiakun52.workers.dev"
         }
       }
     },
@@ -369,14 +365,14 @@
       "uuid": "4690beec-1316-4a33-90e7-5a7cf5463994",
       "tls": {
         "enabled": true,
-        "server_name": "proxy.badakterbangx.my.id",
+        "server_name": "proxy.vortex-x.workers.dev",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/36.95.152.58-12137",
         "headers": {
-          "Host": "proxy.badakterbangx.my.id"
+          "Host": "proxy.vortex-x.workers.dev"
         }
       }
     },
@@ -388,14 +384,14 @@
       "password": "919de8b3-d78c-42ed-8534-ff995ade2276",
       "tls": {
         "enabled": true,
-        "server_name": "proxy.badakterbangx.my.id",
+        "server_name": "proxy.vortex-x.workers.dev",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/47.74.254.191-8900",
         "headers": {
-          "Host": "proxy.badakterbangx.my.id"
+          "Host": "proxy.vortex-x.workers.dev"
         }
       }
     },
@@ -407,7 +403,7 @@
       "method": "none",
       "password": "919de8b3-d78c-42ed-8534-ff995ade2276",
       "plugin": "v2ray-plugin",
-      "plugin_opts": "tls;mux=0;mode=websocket;path=/129.150.58.86-57621;host=proxy.badakterbangx.my.id"
+      "plugin_opts": "tls;mux=0;mode=websocket;path=/129.150.58.86-57621;host=proxy.vortex-x.workers.dev"
     },
     {
       "type": "vless",
@@ -417,14 +413,14 @@
       "uuid": "919de8b3-d78c-42ed-8534-ff995ade2276",
       "tls": {
         "enabled": true,
-        "server_name": "proxy.badakterbangx.my.id",
+        "server_name": "proxy.vortex-x.workers.dev",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/178.128.80.43-443",
         "headers": {
-          "Host": "proxy.badakterbangx.my.id"
+          "Host": "proxy.vortex-x.workers.dev"
         }
       }
     },
