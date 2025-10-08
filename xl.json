@@ -293,19 +293,19 @@
     {
       "type": "trojan",
       "tag": "2 🇸🇬 DigitalOcean WS TLS [nautica]",
-      "server": "quiz.int.vidio.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "password": "bf9fe9c7-5a15-4fa6-8786-ee80d2315417",
       "tls": {
         "enabled": true,
-        "server_name": "nautica.krikkrik.tech",
+        "server_name": "ava.game.naver.com.cfree.vortexx.biz.id",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/104.248.145.216-443",
         "headers": {
-          "Host": "nautica.krikkrik.tech"
+          "Host": "ava.game.naver.com.cfree.vortexx.biz.id"
         }
       }
     },
@@ -331,12 +331,12 @@
     {
       "type": "shadowsocks",
       "tag": "1 🇮🇩 CV. Rumahweb Indonesia WS TLS [proxy]",
-      "server": "quiz.int.vidio.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "method": "none",
       "password": "4690beec-1316-4a33-90e7-5a7cf5463994",
       "plugin": "v2ray-plugin",
-      "plugin_opts": "tls;mux=0;mode=websocket;path=/203.194.112.119-8443;host=proxy.vortex-x.workers.dev"
+      "plugin_opts": "tls;mux=0;mode=websocket;path=/203.194.112.119-8443;host=ava.game.naver.com.cfree.vortexx.biz.id"
     },
     {
       "type": "trojan",
@@ -379,19 +379,19 @@
     {
       "type": "trojan",
       "tag": "1 🇸🇬 Alibaba Cloud - SG WS TLS [proxy]",
-      "server": "quiz.int.vidio.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "password": "919de8b3-d78c-42ed-8534-ff995ade2276",
       "tls": {
         "enabled": true,
-        "server_name": "proxy.vortex-x.workers.dev",
+        "server_name": "ava.game.naver.com.cfree.vortexx.biz.id",
         "insecure": true
       },
       "transport": {
         "type": "ws",
         "path": "/47.74.254.191-8900",
         "headers": {
-          "Host": "proxy.vortex-x.workers.dev"
+          "Host": "ava.game.naver.com.cfree.vortexx.biz.id"
         }
       }
     },
